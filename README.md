@@ -210,7 +210,7 @@ A final possible fix is to use AUR packages, such as `sway-nvidia` and `wlroots-
 
 1) Run `sudo pacman -S git`. Then run `git clone https://aur.archlinux.org/sway-nvidia.git`. Enter the directory with `cd sway-nvidia` and then run `makepkg -si`. (This will NOT automatically receive updates.)
 
-2) Run `sudo pacman -S git`. A list of helpers are available on the [Arch Wiki](https://wiki.archlinux.org/title/AUR_helpers), but this example will show `paru`. Run `git clone https://aur.archlinux.org/paru.git`. Enter the directory with `cd paru` and then run `makepkg -si`. You will then use `paru -S nvidia-sway` to install the patch. Then in your "~/.bash_profile" you need to replace `exec sway --unsupported-gpu` to `exec sway-nvidia`. If you want to update your system, all you need to do now is run `paru` and nothing else, unless you have Flatpak or Snap or some other package manager installed.
+2) Run `sudo pacman -S git`. A list of helpers are available on the [Arch Wiki](https://wiki.archlinux.org/title/AUR_helpers), but this example will show `paru`. Run `git clone https://aur.archlinux.org/paru.git`. Enter the directory with `cd paru` and then run `makepkg -si`. You will then use `paru -S nvidia-sway` to install the patch. Then in your "~/.bash_profile" you need to replace `exec sway --unsupported-gpu` to `exec sway-nvidia`.
 
 3) Run `sudo pacman -S git`. Then run `git clone https://aur.archlinux.org/wlroots-nvidia.git`. Enter the directory with `cd wlroots-nvidia` and then run `makepkg -si`. (This will NOT automatically receive updates.)
 
