@@ -84,7 +84,7 @@ Run `iwctl`. This will put you into a new interactive Shell environment. Here yo
 
 In this interactive Shell environment, run `device list`. If you see your wireless card there, take note of what its identifier is. For this guide, please acknowledge it will be assumed to be "wlan0."
 
-If your wireless card is not listed as "Powered on," you will need to take note of its adapter identifier. Please acknowledge that it will be assumed to be "phy0 you will need to take note of its adapter identifier. Please acknowledge that it will be assumed to be "phy0." Run `adapter phy0 set-property Powered on` in the interactive Shell environment. Then run `device wlan0 set-property Powered on`. 
+If your wireless card is not listed as "Powered on," you will need to take note of its adapter identifier. Please acknowledge that it will be assumed to be "phy0" you will need to take note of its adapter identifier. Please acknowledge that it will be assumed to be "phy0." Run `adapter phy0 set-property Powered on` in the interactive Shell environment. Then run `device wlan0 set-property Powered on`. 
 
 Afterward, a station should be already assigned to your wireless card. You can specify the station by the wireless card identifier. Run `station wlan0 scan` in the interactive Shell environment to scan for networks. This should populate the known list of networks. To view this list, run `known-networks list`. When you're finally ready to connect to one, run `station wlan0 connect SSID` replacing "SSID" with the name of your WiFi network. Verify you are connected with `device wlan0 show`.
 
