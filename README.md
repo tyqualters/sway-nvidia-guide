@@ -144,7 +144,7 @@ If you are dual-booting, be wary of bootable conflicts. When I tried installing 
 
 The NVIDIA Open Source Modules option for newer GPUs will not install the best option for Sway. This will install the `nvidia-open` package. You will need the `nvidia-open-dkms` package, as well as `linux-headers`.
 
-To do this, it's pretty simple: run `sudo pacman -S nvidia-open-dkms linux-headers` and select enter "Y" to verify any overrides.
+To do this, it's pretty simple: run `sudo nvidia-open-dkms linux-headers` and select enter "Y" to verify any overrides.
 
 Please make sure the driver versions are at least over 500. My system tested with version 525.
 
@@ -245,6 +245,10 @@ Do not run Sway in `sudo`. It should only have user mode privileges.
 ### XWayland
 
 XWayland is enabled by default. Do not try to enable it in the Sway configuration file. It's bad news bears.
+
+### Extra packages I installed
+
+I'm not sure if these will help you out or not in your endeavors, but I also ran the following command: `sudo pacman -S lib32-mesa lib32-keyutils lib32-nvidia-utils lib32-nvidia-cg-toolkit opencl-nvidia`.
 
 ### Exiting Sway
 
