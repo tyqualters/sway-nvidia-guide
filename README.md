@@ -248,7 +248,7 @@ XWayland is enabled by default. Do not try to enable it in the Sway configuratio
 
 ### Extra packages I installed
 
-I'm not sure if these will help you out or not in your endeavors, but I also ran the following command: `sudo pacman -S lib32-mesa lib32-keyutils lib32-nvidia-utils lib32-nvidia-cg-toolkit opencl-nvidia`.
+I'm not sure if these will help you out or not in your endeavors, but I also ran the following command: `sudo pacman -S lib32-mesa lib32-keyutils lib32-nvidia-utils lib32-nvidia-cg-toolkit opencl-nvidia vulkan-headers`.
 
 ### Exiting Sway
 
