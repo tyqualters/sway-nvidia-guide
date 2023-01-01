@@ -144,7 +144,7 @@ If you are dual-booting, be wary of bootable conflicts. When I tried installing 
 
 The NVIDIA Open Source Modules option for newer GPUs will not install the best option for Sway. This will install the `nvidia-open` package. You will need the `nvidia-open-dkms` package, as well as `linux-headers`.
 
-To do this, it's pretty simple: run `sudo nvidia-open-dkms linux-headers` and select enter "Y" to verify any overrides.
+To do this, it's pretty simple: run `sudo pacman -S nvidia-open-dkms linux-headers` and select enter "Y" to verify any overrides.
 
 Please make sure the driver versions are at least over 500. My system tested with version 525.
 
