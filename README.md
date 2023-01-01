@@ -208,8 +208,6 @@ Another possible fix is to go through all the Sway source code, replacing `glFlu
 
 A final possible fix is to use AUR packages, such as `sway-nvidia` and `wlroots-nvidia`. This may actually allow compatibility with fully proprietary NVIDIA drivers. So instead of having `nvidia-open` and `nvidia-open-dkms`, you'd instead have `nvidia` and possibly `nvidia-dkms`. In the end, it just depends on your system. If you decide to try the proprietary drivers, DO NOT do `sudo pacman -R nvidia-open nvidia-open-dkms` but instead do `sudo pacman -S nvidia nvidia-dkms` as it will automatically handle all the dependencies for you and avoid errors. The following option 1 will be for installing `sway-nvidia` from source, option 2 for using an AUR helper to install `sway-nvidia`, option 3 will be for installing `wlroots-nvidia` from source, and (**RECOMMENDED FOR BEST RESULTS**) option 4 for using an AUR helper to install `wlroots-nvidia`. 
 
-Note:
-
 1) Run `sudo pacman -S git`. Then run `git clone https://aur.archlinux.org/sway-nvidia.git`. Enter the directory with `cd sway-nvidia` and then run `makepkg -si`. (This will NOT automatically receive updates.)
 
 2) Run `sudo pacman -S git`. A list of helpers are available on the [Arch Wiki](https://wiki.archlinux.org/title/AUR_helpers), but this example will show `paru`. Run `git clone https://aur.archlinux.org/paru.git`. Enter the directory with `cd paru` and then run `makepkg -si`. You will then use `paru -S nvidia-sway` to install the patch. Then in your "~/.bash_profile" you need to replace `exec sway --unsupported-gpu` to `exec sway-nvidia`. If you want to update your system, all you need to do now is run `paru` and nothing else, unless you have Flatpak or Snap or some other package manager installed.
@@ -223,6 +221,10 @@ The best working solution for me was using `wlroots-nvidia` with the open source
 To update applications installed with `paru`, simply run `paru`.
 
 There are also applications you can install that have the ability to change the screen resolution at runtime.
+
+### Audio
+
+You should not need to do any specific configuring for proper audio. The Arch Linux installer (assuming you followed my guide) would have already configured it and installed `pavucontrol`. If you want to change your output/input device and/or the volume, simply run `pavucontrol` and it will pop up a GUI application for configuration.
 
 ### Trying out Sway
 
